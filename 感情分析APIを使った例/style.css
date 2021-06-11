@@ -1,0 +1,15 @@
+.Button-style {
+    font-size: 18px;
+    display: inline-block;
+    padding: 0.5em 1em 0.3em;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: #0099ff;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .border01 {
+    color: rgba(233, 30, 99, 0.7);
+    text-shadow: 3px 3px #fff, 4px 4px 0 #5d6f77, 4px 2px 0 #5d6f77, 2px 4px 0 #5d6f77, 2px 2px 0 #5d6f77;
+}
