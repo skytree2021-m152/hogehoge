@@ -11,7 +11,7 @@ class MyTwitter:
 
     api = None
     
-    def __init__(self, twitter_id='SKYTREE2021_01'):
+    def __init__(self, twitter_id='SKYTREE2021_02'):
 
         config = configparser.ConfigParser()
 
