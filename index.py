@@ -17,7 +17,7 @@ geturl = "https://api.twitter.com/1.1/statuses/oembed.json?id="
 if tw.api is not None:
   #リストの中から最新2ツイートを取得
     for status in tw.api.list_timeline(list_id=1403224831550648321, count=3, include_rts=1):
-        print(status._json["entities"]["urls"][0]["expanded_url"])
+        print(status._json["entities"]["urls"][0]["url"])
         #返ってきたtweetのidを取得
         tweet_id = status.id
         idlist.append(tweet_id)
