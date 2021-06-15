@@ -18,7 +18,15 @@ geturl = "https://api.twitter.com/1.1/statuses/oembed.json?id="
 if tw.api is not None:
   #リストの中から最新3ツイートを取得(リツイートを含む)
     for status in tw.api.list_timeline(list_id=1403234425500884994, count=3, include_rts=1):
-        #print(status._json["entities"]["urls"][0]["url"])--エラーでる
+      if "retweeted_status" in status._json:
+        print("リツイートされているツイート",status.id)
+        tweet_id = status._json["retweeted_status"]["id"]
+        idlist.append(tweet_id)
+        stat = tw.api.get_status(tweet_id)
+        statuses.append(stat._json)
+      
+      else:
+        print("リツイートではないツイート",status.id)
         #返ってきたtweetのidを取得
         tweet_id = status.id
         idlist.append(tweet_id)
@@ -26,8 +34,6 @@ if tw.api is not None:
 
 else:
   print(traceback.format_exc())
-
-print(statuses[2])
 
 print(idlist)
 
@@ -54,3 +60,12 @@ if __name__ == '__main__':
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 title_str = 'TWITTER トレンド'
+
+for i in range(len(statuses)):
+
+  #urlのあるツイートか判定
+  if statuses[i]["entities"]["urls"]:
+    print(i+1,"個目のツイートのリンクは",statuses[i]["entities"]["urls"][0]["url"])
+
+  else:
+    print(i+1,"個目のツイートにはリンクが貼られていないので本文を取得")
