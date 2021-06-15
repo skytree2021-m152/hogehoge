@@ -4,6 +4,7 @@ import io, sys, os, codecs, random
 import mytw, tweepy, traceback,datetime
 import requests, datetime, json, os, sys, psycopg2, traceback, configparser
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 #ニュースサイトからテキスト取得するためのファイル
 import default,kanjou
@@ -91,9 +92,8 @@ for i in range(len(statuses)):
 #３つのツイートを感情分析APIに入れる
 for i in range(3):
   res = kanjou.main(texts[i])
-  print(res)
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+  #CGIの時は↓はけすこと 
+  #print(res)
 
 title_str = 'TWITTER トレンド'
 
