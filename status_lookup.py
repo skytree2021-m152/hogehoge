@@ -5,10 +5,6 @@ tw = mytw.MyTwitter()
 
 #欲しいツイートのIDをここに入れる
 id_ = "1404621357917237248"
-<<<<<<< HEAD
-=======
-#1404621357917237248
->>>>>>> ea51909cd2b25f9be0152d51721e5fa44a9ccca1
 
 if tw.api is not None:
     #print(status._json["entities"]["urls"][0]["url"])--エラーでる
