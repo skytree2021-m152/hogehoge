@@ -5,6 +5,9 @@ import mytw, tweepy, traceback,datetime
 import requests, datetime, json, os, sys, psycopg2, traceback, configparser
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 
+#ニュースサイトからテキスト取得するためのファイル
+import default
+
 # InsecureRequestWarning対策
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
@@ -16,22 +19,24 @@ idlist=[]
 statuses=[]
 #Webサイトに埋め込む用HTMLのリスト
 umekomi=[]
+#感情分析に入れたい文のリスト
+texts=[]
 #umekomiをもらうためのURL
 geturl = "https://api.twitter.com/1.1/statuses/oembed.json?id="
 
 if tw.api is not None:
   #リストの中から最新3ツイートを取得(リツイートを含む)
-    for status in tw.api.list_timeline(list_id=1403234425500884994, count=3, include_rts=1):
+    for status in tw.api.list_timeline(list_id=1404673140899282948, count=3, include_rts=1):
       #リツイートされたものか判定
         if "retweeted_status" in status._json:
-          #print("リツイートされているツイート",status.id)
+          print("リツイートされているツイート",status.id)
 
           #リツイートされた元々のツイートを引っ張ってくる処理
           tweet_id = status._json["retweeted_status"]["id"]
           idlist.append(tweet_id)
       
         else:
-          #print("リツイートではないツイート",status.id)
+          print("リツイートではないツイート",status.id)
           #返ってきたtweetのidを取得
           tweet_id = status.id
           idlist.append(tweet_id)
@@ -44,7 +49,7 @@ if tw.api is not None:
 else:
     print(traceback.format_exc())
 
-#print(idlist)
+print(idlist)
 
 #GetJMADataの定義、JSONとってくる
 def GetJMAData(request):
@@ -70,12 +75,17 @@ for i in range(len(statuses)):
 
   #urlのあるツイートか判定
   if statuses[i]["entities"]["urls"]:
-    print(i+1,"個目のツイートのリンクは",statuses[i]["entities"]["urls"][0]["url"])
-    #ここに松井さんのスクレイピング
+    #ツイートに載っているリンクURLを変数に代入
+    url=statuses[i]["entities"]["urls"][0]["url"]
+    #urlを別ファイルに渡して実行
+    text = default.func(url)
+    #print(text)
+    texts.append(text)
 
   else:
-    print(statuses[i]["full_text"])
-    #ここに下田さんの本文取得
+    #ツイートの本文取得
+    #print(statuses[i]["full_text"])
+    texts.append(statuses[i]["full_text"])
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
