@@ -12,7 +12,7 @@ if tw.api is not None:
 
     #tweet_mode='extended'を入れるとfull_textが取得できるようになる
     statuses= tw.api.get_status(id_,tweet_mode='extended')
-    print(statuses.full_text)
+    print(statuses._json)
 
 else:
     print(traceback.format_exc())
