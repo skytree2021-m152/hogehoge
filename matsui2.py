@@ -13,6 +13,4 @@ text=soup.get_text()
 #print(text)
 lines= [line.strip() for line in text.splitlines()]
 text="\n".join(line for line in lines if line)
-moji = text.split('【関連記事】')[0]
-moji2 = moji.split('JavaScriptの設定を変更する方法はこちら')[1]
-print(moji2)
+print(text)
