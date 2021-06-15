@@ -4,7 +4,7 @@ import mytw, tweepy, traceback,datetime
 tw = mytw.MyTwitter()
 
 #欲しいツイートのIDをここに入れる
-id_ = "1404593501405257728"
+id_ = "1404621357917237248"
 
 if tw.api is not None:
     statuses= tw.api.get_status(id_)
