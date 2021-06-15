@@ -1,6 +1,9 @@
+#ツイートIDからstatus(JSON)を持ってくるプログラム
+
 import mytw, tweepy, traceback,datetime
 tw = mytw.MyTwitter()
 
+#欲しいツイートのIDをここに入れる
 id_ = "1404593501405257728"
 
 if tw.api is not None:
