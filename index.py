@@ -21,7 +21,7 @@ geturl = "https://api.twitter.com/1.1/statuses/oembed.json?id="
 
 if tw.api is not None:
   #リストの中から最新3ツイートを取得(リツイートを含む)
-    for status in tw.api.list_timeline(list_id=1403224831550648321, count=3, include_rts=1):
+    for status in tw.api.list_timeline(list_id=1403234425500884994, count=4, include_rts=1,tweet_mode='extended'):
       #リツイートされたものか判定
         if "retweeted_status" in status._json:
           #print("リツイートされているツイート",status.id)
@@ -43,6 +43,7 @@ else:
     print(traceback.format_exc())
 
 #print(idlist)
+print(statuses.full_text)
 
 #GetJMADataの定義、JSONとってくる
 def GetJMAData(request):
