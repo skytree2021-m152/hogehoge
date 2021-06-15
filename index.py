@@ -21,7 +21,7 @@ geturl = "https://api.twitter.com/1.1/statuses/oembed.json?id="
 
 if tw.api is not None:
   #リストの中から最新3ツイートを取得(リツイートを含む)
-    for status in tw.api.list_timeline(list_id=1403234425500884994, count=4, include_rts=1,tweet_mode='extended'):
+    for status in tw.api.list_timeline(list_id=1403234425500884994, count=3, include_rts=1):
       #リツイートされたものか判定
         if "retweeted_status" in status._json:
           #print("リツイートされているツイート",status.id)
@@ -39,7 +39,7 @@ if tw.api is not None:
     for i in range(len(idlist)):
       stat=tw.api.get_status(idlist[i],tweet_mode='extended')
       statuses.append(stat._json)
-      print(statuses[i]["full_text"])
+      
 
 else:
     print(traceback.format_exc())
@@ -74,7 +74,7 @@ for i in range(len(statuses)):
     #ここに松井さんのスクレイピング
 
   else:
-    print(i+1,"個目のツイートにはリンクが貼られていないので本文を取得")
+    print(statuses[i]["full_text"])
     #ここに下田さんの本文取得
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
