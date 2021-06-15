@@ -31,7 +31,7 @@ if tw.api is not None:
         if "retweeted_status" in status._json:
           print("リツイートされているツイート",status.id)
 
-          #リツイートされた元々のツイートを引っ張ってくる処理
+          #リツイートされた元々のツイートIDを引っ張ってくる処理
           tweet_id = status._json["retweeted_status"]["id"]
           idlist.append(tweet_id)
       
@@ -42,6 +42,7 @@ if tw.api is not None:
           idlist.append(tweet_id)
 
     for i in range(len(idlist)):
+      #statusではツイート本文が途中で切れてしまう問題を解決
       stat=tw.api.get_status(idlist[i],tweet_mode='extended')
       statuses.append(stat._json)
       
@@ -49,7 +50,7 @@ if tw.api is not None:
 else:
     print(traceback.format_exc())
 
-print(idlist)
+#print(idlist)
 
 #GetJMADataの定義、JSONとってくる
 def GetJMAData(request):
@@ -87,6 +88,7 @@ for i in range(len(statuses)):
     #print(statuses[i]["full_text"])
     texts.append(statuses[i]["full_text"])
 
+#３つのツイートを感情分析APIに入れる
 for i in range(3):
   res = kanjou.main(texts[i])
   print(res)
