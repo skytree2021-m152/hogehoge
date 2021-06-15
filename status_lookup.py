@@ -5,6 +5,7 @@ tw = mytw.MyTwitter()
 
 #欲しいツイートのIDをここに入れる
 id_ = "1404621357917237248"
+#1404621357917237248
 
 if tw.api is not None:
     #print(status._json["entities"]["urls"][0]["url"])--エラーでる
@@ -12,7 +13,7 @@ if tw.api is not None:
 
     #tweet_mode='extended'を入れるとfull_textが取得できるようになる
     statuses= tw.api.get_status(id_,tweet_mode='extended')
-    print(statuses._json)
+    print(statuses.full_text)
 
 else:
     print(traceback.format_exc())
