@@ -29,21 +29,22 @@ if tw.api is not None:
           #リツイートされた元々のツイートを引っ張ってくる処理
           tweet_id = status._json["retweeted_status"]["id"]
           idlist.append(tweet_id)
-          stat = tw.api.get_status(tweet_id)
-          statuses.append(stat._json)
       
         else:
           #print("リツイートではないツイート",status.id)
           #返ってきたtweetのidを取得
           tweet_id = status.id
           idlist.append(tweet_id)
-          statuses.append(status._json)
+
+    for i in range(len(idlist)):
+      stat=tw.api.get_status(idlist[i],tweet_mode='extended')
+      statuses.append(stat._json)
+      print(statuses[i]["full_text"])
 
 else:
     print(traceback.format_exc())
 
 #print(idlist)
-print(statuses.full_text)
 
 #GetJMADataの定義、JSONとってくる
 def GetJMAData(request):
