@@ -8,8 +8,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 #pythonファイルのインポート
 #scraping.の後はリストに応じたファイル名を指定！
-import default_list as s
-import kanjou
+import scraping.default_list as s,kanjou
 
 # InsecureRequestWarning対策
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
