@@ -43,11 +43,11 @@ if __name__ == '__main__':
     request = geturl+str(idlist[i])
     res = GetJMAData(request)
     #JSONデータ(res)のhtmlをumekomiリストに入れる
-    umekomi.append(res["html"])
+    res2=res["html"]
+    umekomi.append(res2)
 
 #umekomiを確認(いらなくなったら#つけてください)
 #print(umekomi)
-
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 title_str = 'TWITTER トレンド'
