@@ -61,7 +61,7 @@ Content-type: text/html
 <meta charset="utf-8">
 
 
-<link rel="stylesheet" href="../index2.css">
+<link rel="stylesheet" href="index2.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <title>{title}</title>
