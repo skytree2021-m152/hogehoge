@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 
-html=requests.get("https://news.yahoo.co.jp/articles/b60896bc8779057a72dac6d1482c152bcd3eae18")
+html=requests.get("https://eiga.com/news/20210616/7/")
 html.encoding = html.apparent_encoding
 soup=BeautifulSoup(html.text,"html.parser")
 #print(soup.prettify)
