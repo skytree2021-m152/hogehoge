@@ -8,7 +8,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 #pythonファイルのインポート
 #scraping.の後はリストに応じたファイル名を指定！
-import scraping.default_list as s,kanjou
+import scraping.entertainment as s,kanjou
 
 # InsecureRequestWarning対策
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -79,7 +79,15 @@ for i in range(len(statuses)):
   #urlのあるツイートか判定
   if statuses[i]["entities"]["urls"]:
     #ツイートに載っているリンクURLを変数に代入
-    url=statuses[i]["entities"]["urls"][0]["url"]
+    url=statuses[i]["entities"]["urls"][0]["expanded_url"]
+
+    #モデルプレスとオリコンは全文表示のリンクに変える
+    if "mdpr.com" in url:
+      url=url.replace("news/","news/detail/")
+    if "oricon.co.jp" in url:
+      url=url.replace("?utm_source=Twitter&utm_medium=social&ref_cd=tw_pic","full/")
+    
+
     #urlを別ファイルに渡して実行
     text = s.func(url)
     #print(text)
@@ -164,19 +172,17 @@ Content-type: text/html
 </div>
 
 
-<div class="dropdown">
-	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-		選択
-		<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu" role="menu">
-		<li role="presentation"><a href="ITindex.py">IT</a></li>
-		<li role="presentation"><a href="kokusaiindex.py">国際</a></li>
-		<li role="presentation"><a href="sportindex.py">スポーツ</a></li>
-    <li role="presentation"><a href="entameindex.py">芸能・エンタメ</a></li>
-	</ul>
-</div>
 
+<main>
+    <section>
+      <form action="/cgi-bin/step2.py" method="post"><center>
+      <dl>
+        <dt>リスト検索</dt><dd><select id="activity" name="activity"><option value="">-----</option><option value="1">IT</option><option value="2">国際</option><option value="3">スポーツ</option><option value="4">芸能・エンタメ</option></select></dd>
+      </dl>
+      <button>入力</button></center>
+      </form>
+    </section>
+</main>
 
 </body>
 </html>
