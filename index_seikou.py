@@ -93,7 +93,7 @@ for i in range(len(statuses)):
 for i in range(3):
   res = kanjou.main(texts[i])
   #CGIの時は↓はけすこと 
-  #print(res)
+  print(res)
 
 title_str = 'TWITTER トレンド'
 
