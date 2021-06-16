@@ -3,7 +3,6 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 def func(url):
-    url="https://www.bbc.com/japanese/57478973"
     html=requests.get(url)
     html.encoding = html.apparent_encoding
     soup=BeautifulSoup(html.text,"html.parser")
