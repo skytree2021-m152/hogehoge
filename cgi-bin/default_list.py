@@ -36,12 +36,21 @@ def func(url):
             text = text.split('続きを読む')[0]
     
     elif aruka2==True:
-        text = text.split('このページではJavaScriptを使用しています。')[1]
-        text = text.split('一覧へ戻る')[0]
+        aruka11 = 'このページではJavaScriptを使用しています。' in text
+        aruka12 = '一覧へ戻る' in text
+        if aruka11==True:
+            text=text.split('このページではJavaScriptを使用しています。')[1]
+        if aruka12==True:
+            text=text.split('一覧へ戻る')[0]
+        
         
     elif aruka3==True:
-        text = text.split('完了しました')[1]
-        text = text.split('あわせて読みたい')[0]
+        aruka13 = '完了しました' in text
+        aruka14 = 'あわせて読みたい' in text
+        if aruka13==True:
+            text=text.split('完了しました')[1]
+        if aruka14==True:
+            text=text.split('あわせて読みたい')[0]
 
     elif aruka4 == True:
         text = text.split('[PR]')[1]
