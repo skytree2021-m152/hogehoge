@@ -58,7 +58,9 @@ def func(url):
             text= text.replace("すべての画像をみる",'')
 
     if "oricon.co.jp" in url:
-        #text = text.split('''ホームライフ''')[1]
+        text = text.split('''ライフ
+ランキング
+チケット''')[1]
         text = text.split('コメントする・見る')[0]
         if "【写真】その他の写真を見る" in text:
             text= text.replace("【写真】その他の写真を見る",'')
