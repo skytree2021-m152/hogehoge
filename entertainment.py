@@ -21,7 +21,8 @@ def func(url):
     aruka4='朝日新聞デジタル記事' in text
     #print(aruka)
     if "映画.com" in text:
-    
+        text = text.split('日 >')[1]
+        text = text.split('@eigacomをフォロー')[0]
     
     elif aruka2==True:
         text = text.split('このページではJavaScriptを使用しています。')[1]
