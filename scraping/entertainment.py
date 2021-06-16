@@ -38,30 +38,42 @@ def func(url):
 
     #サイトごとにtextを切り出し
     if "eiga.com" in url:
-        text = text.split('日 >')[1]
-        text = text.split('@eigacomをフォロー')[0]
+        if '日 >' in text:
+            text = text.split('日 >')[1]
+        if '@eigacomをフォロー' in text:
+            text = text.split('@eigacomをフォロー')[0]
     
     if "natalie.mu" in url:
-        text = text.split('ブックマーク')[1]
-        text = text.split('この記事の画像')[0]
+        if 'ブックマーク' in text:
+            text = text.split('ブックマーク')[1]
+        if 'この記事の画像' in text:
+            text = text.split('この記事の画像')[0]
         
     if "fashionsnap.com" in url:
-        text = text.split('ニュース ►')[1]
-        text = text.split('メーカー:')[0]
+        if 'ニュース ►' in text:
+            text = text.split('ニュース ►')[1]
+        if 'メーカー:' in text:
+            text = text.split('メーカー:')[0]
         if "— ADの後に記事が続きます —" in text:
             text= text.replace("— ADの後に記事が続きます —",'')
 
     if "mdpr.jp" in url:
-        text = text.split('views')[1]
-        text = text.split('【Not Sponsored 記事】')[0]
+        if 'views' in text:
+            text = text.split('views')[1]
+        if '【Not Sponsored 記事】' in text:
+            text = text.split('【Not Sponsored 記事】')[0]
         if "すべての画像をみる" in text:
             text= text.replace("すべての画像をみる",'')
 
     if "oricon.co.jp" in url:
-        text = text.split('''ライフ
+        if '''ライフ
+ランキング
+チケット''' in text:
+            text = text.split('''ライフ
 ランキング
 チケット''')[1]
-        text = text.split('コメントする・見る')[0]
+        if 'コメントする・見る' in text:
+            text = text.split('コメントする・見る')[0]
         if "【写真】その他の写真を見る" in text:
             text= text.replace("【写真】その他の写真を見る",'')
 

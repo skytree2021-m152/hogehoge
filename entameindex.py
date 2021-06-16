@@ -84,8 +84,10 @@ for i in range(len(statuses)):
     #モデルプレスとオリコンは全文表示のリンクに変える
     if "mdpr.jp" in url:
       url=url.replace("news/","news/detail/")
-    if "oricon.co.jp" in url:
-      url=url.replace("?utm_source=Twitter&utm_medium=social&ref_cd=tw_pic","full/")
+    if "oricon.co.jp" in url and "?utm_source=Twitter" in url:
+      url=url.split("?utm_source=Twitter")[0]
+      url=url+"full/"
+    print(i+1,url)
     
 
     #urlを別ファイルに渡して実行
