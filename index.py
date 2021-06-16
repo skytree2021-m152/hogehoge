@@ -171,7 +171,7 @@ Content-type: text/html
 	</button>
 	<ul class="dropdown-menu" role="menu">
 		<li role="presentation"><a href="ITindex.py">IT</a></li>
-		<li role="presentation"><a href="kokusaiindex.py">こくさい国際</a></li>
+		<li role="presentation"><a href="kokusaiindex.py">さい国際</a></li>
 		<li role="presentation"><a href="sportindex.py">スポーツ</a></li>
     <li role="presentation"><a href="entameindex.py">芸能・エンタメ</a></li>
 	</ul>
