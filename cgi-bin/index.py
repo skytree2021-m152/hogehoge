@@ -43,11 +43,11 @@ if __name__ == '__main__':
     request = geturl+str(idlist[i])
     res = GetJMAData(request)
     #JSONデータ(res)のhtmlをumekomiリストに入れる
-    umekomi.append(res["html"])
+    res2=res["html"]
+    umekomi.append(res2)
 
 #umekomiを確認(いらなくなったら#つけてください)
 #print(umekomi)
-
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 title_str = 'TWITTER トレンド'
@@ -60,8 +60,8 @@ Content-type: text/html
 <head>
 <meta charset="utf-8">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+<link rel="stylesheet" href="../index2.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 <title>{title}</title>
@@ -70,18 +70,57 @@ Content-type: text/html
 
 <body>
 
-<h2>{title}</h2> 
-<p>ページ説明を入れる予定</p>
+<center><h1>{title}</h1></center>
+<p><center>本日のニュースを気軽に読む</center></p>
 
-{tw1}{tw2}{tw3}
+<div class="flex">
+<div>{tw1}</div>
+<div class="balloon5">
+<div class="faceicon">
+<img src="https://1.bp.blogspot.com/-Zg12XWQzTQA/U7O64KmAGhI/AAAAAAAAiUY/PvNni1PWTyk/s800/whiteman2_idea.png"  width="280" height="186" />
+</div>
+<div class="chatting">
+<div class="says">
+<h2>感情のデカさ：ほげ1<br>いい話度：hoge1</h2></div>
+</div>
+</div>
+</div>
+
+<div class="flex">
+<div>{tw2}</div>
+<div class="balloon5">
+<div class="faceicon">
+<img src="https://2.bp.blogspot.com/-jb-vJs48VBs/U7O64nt6_SI/AAAAAAAAiUg/N46UerPXEJU/s800/whiteman2_shock.png"  width="280" height="186" />
+</div>
+<div class="chatting">
+<div class="says">
+<h2>感情のデカさ：ほげ2<br>いい話度：hoge2</h2></div>
+</div>
+</div>
+</div>
+
+<div class="flex">
+<div>{tw3}</div>
+<div class="balloon5">
+<div class="faceicon">
+<img src="https://2.bp.blogspot.com/-Bb6rSSRE9u4/U7O648vJ9oI/AAAAAAAAiUk/DpmLgnnSOZU/s800/whiteman2_surprise.png"  width="280" height="186" />
+</div>
+<div class="chatting">
+<div class="says">
+<h2>感情のデカさ：ほげ3<br>いい話度：hoge3</h2></div>
+</div>
+</div>
+</div>
+
+
 
 <main>
     <section>
-      <form action="/cgi-bin/step2.py" method="post">
+      <form action="/cgi-bin/step2.py" method="post"><center>
       <dl>
         <dt>リスト検索</dt><dd><select id="activity" name="activity"><option value="">-----</option><option value="1">IT</option><option value="2">News</option><option value="3">スポーツ</option><option value="4">芸能・エンタメ</option></select></dd>
       </dl>
-      <button class="btn">入力</button>
+      <button>入力</button></center>
       </form>
     </section>
 </main>
