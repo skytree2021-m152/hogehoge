@@ -169,7 +169,7 @@ Content-type: text/html
     <section>
       <form action="/cgi-bin/step2.py" method="post"><center>
       <dl>
-        <dt>リスト検索</dt><dd><select id="activity" name="activity"><option value="">-----</option><option value="1">IT</option><option value="2">News</option><option value="3">スポーツ</option><option value="4">芸能・エンタメ</option></select></dd>
+        <dt>リスト検索</dt><dd><select id="activity" name="activity"><option value="">-----</option><option value="1">IT</option><option value="2">国際</option><option value="3">スポーツ</option><option value="4">芸能・エンタメ</option></select></dd>
       </dl>
       <button>入力</button></center>
       </form>
