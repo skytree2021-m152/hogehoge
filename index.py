@@ -93,7 +93,7 @@ for i in range(len(statuses)):
 mag=[]
 score=[]
 #３つのツイートを感情分析APIに入れる
-for i in range(3):
+for i in range(len(texts)):
   res = kanjou.main(texts[i])
   #CGIの時は↓はけすこと 
   mag.append(res['documentSentiment']["magnitude"])
