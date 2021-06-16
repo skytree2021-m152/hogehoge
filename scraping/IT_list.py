@@ -7,6 +7,13 @@ def func(url):
     html.encoding = html.apparent_encoding
     soup=BeautifulSoup(html.text,"html.parser")
     #print(soup.prettify)
+    for i in range(3):
+            try:
+                soup.find("h4", {"class":"next-title"}).extract()
+            except AttributeError:
+                break
+
+
     for script in soup(["script", "style"]):
         script.decompose()
     #print(soup)
