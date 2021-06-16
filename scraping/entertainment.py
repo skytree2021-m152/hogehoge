@@ -67,5 +67,3 @@ def func(url):
 
 
     return text
-
-print(func("https://www.oricon.co.jp/news/2197007/full/"))
