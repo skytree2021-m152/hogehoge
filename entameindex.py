@@ -28,7 +28,7 @@ geturl = "https://api.twitter.com/1.1/statuses/oembed.json?id="
 
 if tw.api is not None:
   #リストの中から最新3ツイートを取得(リツイートを含む)
-    for status in tw.api.list_timeline(list_id=1404673140899282948, count=3, include_rts=1):
+    for status in tw.api.list_timeline(list_id=1403234679289827330, count=3, include_rts=1):
       #リツイートされたものか判定
         if "retweeted_status" in status._json:
           #print("リツイートされているツイート",status.id)
@@ -82,7 +82,7 @@ for i in range(len(statuses)):
     url=statuses[i]["entities"]["urls"][0]["expanded_url"]
 
     #モデルプレスとオリコンは全文表示のリンクに変える
-    if "mdpr.com" in url:
+    if "mdpr.jp" in url:
       url=url.replace("news/","news/detail/")
     if "oricon.co.jp" in url:
       url=url.replace("?utm_source=Twitter&utm_medium=social&ref_cd=tw_pic","full/")
@@ -97,6 +97,9 @@ for i in range(len(statuses)):
     #ツイートの本文取得
     #print(statuses[i]["full_text"])
     texts.append(statuses[i]["full_text"])
+print(texts[0])
+print(texts[1])
+print(texts[2])
 
 mag=[]
 score=[]
@@ -109,7 +112,7 @@ for i in range(3):
 
 #print(mag)
 #print(score)
-title_str = 'TWITTER トレンド'
+title_str = 'TWITTER トレンド [芸能・エンタメ]'
 
 print('''
 Content-type: text/html
@@ -174,14 +177,7 @@ Content-type: text/html
 
 
 <main>
-    <section>
-      <form action="/cgi-bin/step2.py" method="post"><center>
-      <dl>
-        <dt>リスト検索</dt><dd><select id="activity" name="activity"><option value="">-----</option><option value="1">IT</option><option value="2">国際</option><option value="3">スポーツ</option><option value="4">芸能・エンタメ</option></select></dd>
-      </dl>
-      <button>入力</button></center>
-      </form>
-    </section>
+    <button type=“button” onclick="location.href='index.py'">戻る</button>
 </main>
 
 </body>

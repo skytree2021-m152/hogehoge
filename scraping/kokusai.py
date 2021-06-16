@@ -8,7 +8,10 @@ def func(url):
     soup=BeautifulSoup(html.text,"html.parser")
     #print(soup.prettify)
     for i in range(3):
-        soup.find("a", {"class":"bbc-n8oauk e1cs6q200"}).extract()
+        try:
+            soup.find("a", {"class":"bbc-n8oauk e1cs6q200"}).extract()
+        except AttributeError:
+            break
     for script in soup(["script", "style"]):
         script.decompose()
     #print(soup)
@@ -18,7 +21,7 @@ def func(url):
     text="\n".join(line for line in lines if line)
 
     if "ロイター" in text:
-        text = text.split('1 分で読む')[1]
+        text = text.split('分で読む')[1]
         text = text.split('私たちの行動規範')[0]
 
     if "BBCニュース" in text:
