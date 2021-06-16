@@ -1,0 +1,139 @@
+{
+  'documentSentiment': {
+    'magnitude': 1.2,
+    'score': 0
+  },
+  'language': 'ja',
+  'sentences': [
+    {
+      'text': {
+        'content': '欧州を歴訪中のバイデン米大統領は15日、欧州連合（EU）の首脳と会談した。',
+        'beginOffset': 1
+      },
+      'sentiment': {
+        'magnitude': 0,
+        'score': 0
+      }
+    },
+    {
+      'text': {
+        'content': 'トランプ政権下で冷え込んだ関係の再構築を改めて確認し、対ロシア政策の協調をはかる「ハイレベル対話」を設ける方針を決めた。',
+        'beginOffset': 104
+      },
+      'sentiment': {
+        'magnitude': 0.1,
+        'score': 0.1
+      }
+    },
+    {
+      'text': {
+        'content': 'また、中国を念頭にしたハイテク分野の規制などでも連携を深める仕組みも打ち出した。',
+        'beginOffset': 284
+      },
+      'sentiment': {
+        'magnitude': 0,
+        'score': 0
+      }
+    },
+    {
+      'text': {
+        'content': '主要 7カ国（G7）首脳会議に続く対面での開催で、EU側からはミシェル首脳会議常任議長（大統領に相当）、行政トップのフォンデアライエン欧州委員長らが参加した。',
+        'beginOffset': 407
+      },
+      'sentiment': {
+        'magnitude': 0,
+        'score': 0
+      }
+    },
+    {
+      'text': {
+        'content': '外交・安全保障の分野では、米国が「専制主義国家」と位置づけるロシアや中国への対処を議論。',
+        'beginOffset': 634
+      },
+      'sentiment': {
+        'magnitude': 0.1,
+        'score': -0.1
+      }
+    },
+    {
+      'text': {
+        'content': '米国とEUは、中国 の人権問題や経済関係などを幅広く議論する「対話フォーラム」を設けているが、同様の枠組みを対ロシアでも立ち上げて政策のすりあわせをはかる考えだ。',
+        'beginOffset': 766
+      },
+      'sentiment': {
+        'magnitude': 0,
+        'score': 0
+      }
+    },
+    {
+      'text': {
+        'content': 'バイデン政権はEUと足並みをそろえ、ロシアの反政権活動家ナバリヌイ氏の毒殺未遂事件などを問題視して対ロ制裁を発動。',
+        'beginOffset': 1005
+      },
+      'sentiment': {
+        'magnitude': 0.2,
+        'score': -0.2
+      }
+    },
+    {
+      'text': {
+        'content': 'ロシアと欧米は制裁を掛け合う緊張関係にある。16日にはスイスで米ロ首脳会談が予定されており、プーチン政権に対して、「団結することで圧力を最大化したい」（EU高官）という。',
+        'beginOffset': 1172
+      },
+      'sentiment': {
+        'magnitude': 0,
+        'score': 0
+      }
+    },
+    {
+      'text': {
+        'content': 'また、米欧で「貿易・テクノロジー評議会」を設けて、人工知能（AI）や量子コンピューティング、バイオ技術の規制や規範づくり、半導体などの供給網の強化などにつなげる。',
+        'beginOffset': 1422
+      },
+      'sentiment': {
+        'magnitude': 0,
+        'score': 0
+      }
+    },
+    {
+      'text': {
+        'content': '技術的な覇権を狙い、人権侵害につながる利用をしかねないとみる中国を牽制（けんせい）する狙いがある。',
+        'beginOffset': 1661
+      },
+      'sentiment': {
+        'magnitude': 0.1,
+        'score': -0.1
+      }
+    },
+    {
+      'text': {
+        'content': '米政府高官は、中国の経済的な不正行為に対応することが評議会の目的の一つだとしたうえで、「民主的な同盟国と連携して中国に立ち向かうというバイデン氏の基本戦略に合致するも のだ」と語った。',
+        'beginOffset': 1811
+      },
+      'sentiment': {
+        'magnitude': 0.3,
+        'score': -0.3
+      }
+    },
+    {
+      'text': {
+        'content': '首脳会談では、新型コロナウイルスワクチンの途上国への普及、気候変動への対応などでの共同の取り組みを強化する ことも確認した。（',
+        'beginOffset': 2087
+      },
+      'sentiment': {
+        'magnitude': 0,
+        'score': 0
+      }
+    },
+    {
+      'text': {
+        'content': 'ブリュッセル=高野遼、青田秀樹）',
+        'beginOffset': 2273
+      },
+      'sentiment': {
+        'magnitude': 0,
+        'score': 0
+      }
+    }
+  ]
+}
