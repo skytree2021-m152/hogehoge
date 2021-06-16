@@ -8,7 +8,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 #pythonファイルのインポート
 #scraping.の後はリストに応じたファイル名を指定！
-import scraping.default_list as s,kanjou
+import scraping.sports_list as s,kanjou
 
 # InsecureRequestWarning対策
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -28,7 +28,7 @@ geturl = "https://api.twitter.com/1.1/statuses/oembed.json?id="
 
 if tw.api is not None:
   #リストの中から最新3ツイートを取得(リツイートを含む)
-    for status in tw.api.list_timeline(list_id=1404673140899282948, count=3, include_rts=1):
+    for status in tw.api.list_timeline(list_id=1403234425500884994, count=3, include_rts=1):
       #リツイートされたものか判定
         if "retweeted_status" in status._json:
           #print("リツイートされているツイート",status.id)
@@ -101,7 +101,7 @@ for i in range(3):
 
 #print(mag)
 #print(score)
-title_str = 'TWITTER トレンド'
+title_str = 'TWITTER トレンド [スポーツ]'
 
 print('''
 Content-type: text/html
@@ -164,19 +164,10 @@ Content-type: text/html
 </div>
 
 
-<div class="dropdown">
-	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
-		選択
-		<span class="caret"></span>
-	</button>
-	<ul class="dropdown-menu" role="menu">
-		<li role="presentation"><a href="ITindex.py">IT</a></li>
-		<li role="presentation"><a href="kokusaiindex.py">国際</a></li>
-		<li role="presentation"><a href="sportindex.py">スポーツ</a></li>
-    <li role="presentation"><a href="entameindex.py">芸能・エンタメ</a></li>
-	</ul>
-</div>
 
+<main>
+   <button type=“button” onclick="location.href='index.py'">戻る</button>
+</main>
 
 </body>
 </html>
