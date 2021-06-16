@@ -19,7 +19,7 @@ def func(url):
     aruka3='ITmedia' in text
     aruka4='関連記事' in text
     aruka5='CNET Japan' in text
-    print(aruka3)
+    
     if aruka2==True:
         text = text.split('次の記事')[1]
     if aruka3==True:
