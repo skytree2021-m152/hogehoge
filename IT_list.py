@@ -30,4 +30,4 @@ def func(url):
     if aruka5 == True:
         text = text.split('クリップ')[1]
         text = text.split('CNET Japan')[0]
-    print(text)
+    return text
