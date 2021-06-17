@@ -59,6 +59,8 @@ h1{color: hsl(210, 100%, 56%);}
 }
 
 select{width: 20%;
-  height: 2em;
-
+  height: 3em;
+}
+option{
+  font-size: medium;
 }
