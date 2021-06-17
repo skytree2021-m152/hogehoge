@@ -96,16 +96,14 @@ imagelist=[]
 #３つのツイートを感情分析APIに入れる
 for i in range(len(texts)):
   res = kanjou.main(texts[i])
-  #CGIの時は↓はけすこと 
   mag.append(res['documentSentiment']["magnitude"])
   score.append(res['documentSentiment']['score'])
 
 #３つのジョニーの顔を判定する
 for i in range (len(mag)):
     image= Johnny.Johnny(mag[i],score[i])
-  #CGIの時は↓はけすこと 
     imagelist.append(image)
-   
+
 #print(mag)
 #print(score)
 title_str = 'TWITTER トレンド'
