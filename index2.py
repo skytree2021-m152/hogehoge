@@ -164,6 +164,18 @@ Content-type: text/html
 </div>
 
 
+
+<form>
+<select onChange="top.location.href=value">
+<option value="#"></option>
+<option value="ITindex.py">IT</option>
+<option value="kokusaiindex.py">国際</option>
+<option value="sportindex.py"スポーツ</option>
+<option value="entameindex.py">芸能・エンタメ</option>
+</select>
+</form>
+
+
 <div class="dropdown">
 	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
 		選択
