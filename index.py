@@ -143,6 +143,7 @@ Content-type: text/html
 </select></center>
 </form>
 
+<div class="contents">
 <div class="balloon5">
 <div class="faceicon">
 <img src="https://3.bp.blogspot.com/-lzZsNV3zWuw/U7O66Xv-z3I/AAAAAAAAiVE/sUbsC_xKdP8/s800/whiteman3_tehe.png"  width="280" height="186" />
@@ -156,7 +157,6 @@ Content-type: text/html
 </div>
 </div>
 
-<div class="contents">
 <div class="flex">
   <div>{tw1}</div>
     <div class="balloon5">
