@@ -135,7 +135,7 @@ Content-type: text/html
 </form>
 
 
-<center><div class="flex">
+<div class="flex">
 <div>{tw1}</div>
 <div class="balloon5">
 <div class="faceicon">
@@ -146,7 +146,7 @@ Content-type: text/html
 <h2>感情のデカさ：{mag1}<br>いい話度：{sc1}</h2></div>
 </div>
 </div>
-</div></center>
+</div>
 
 <div class="flex">
 <div>{tw2}</div>
