@@ -5,6 +5,7 @@
     display: -o-flex;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 h1{color: hsl(210, 100%, 56%);}
 
