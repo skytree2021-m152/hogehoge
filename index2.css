@@ -58,6 +58,7 @@ h1{color: hsl(210, 100%, 56%);}
     width: 600px;  
 }
 
-select{width: 200%;
+select{width: 20%;
+  height: 2em;
 
 }
