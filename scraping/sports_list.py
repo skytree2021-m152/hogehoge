@@ -24,18 +24,18 @@ def func(url):
 
     aruka1= 'Yahoo!ニュース' in text
     aruka2= 'sportsnavi' in text
-
+    aruka5 = 'JavaScriptの設定を変更する方法はこちら' in text
+    aruka6 = 'トピックス一覧' in text
+    aruka7='【関連記事】' in text
+    aruka8='続きを読む' in text
+    aruka9='「JavaScriptの設定方法」をご覧ください。' in text
+    aruka10='関連リンク' in text
+    aruka11='<![endif]-->' in text
+    aruka12='このページではJavaScriptを使用しています。' in text
+    aruka13='続きはスポーツナビ公式アプリ（無料）で読むことができます。' in text
 
     if aruka1==True:
-        aruka5 = 'JavaScriptの設定を変更する方法はこちら' in text
-        aruka6 = 'トピックス一覧' in text
-        aruka7='【関連記事】' in text
-        aruka8='続きを読む' in text
-        aruka9='「JavaScriptの設定方法」をご覧ください。' in text
-        aruka10='関連リンク' in text
-        aruka11='<![endif]-->' in text
-        aruka12='このページではJavaScriptを使用しています。' in text
-        aruka13='続きはスポーツナビ公式アプリ（無料）で読むことができます。' in text
+        
 
         if aruka5==True:
             text=text.split('JavaScriptの設定を変更する方法はこちら')[1]
