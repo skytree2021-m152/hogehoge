@@ -72,7 +72,7 @@ if __name__ == '__main__':
     umekomi.append(res["html"])
 
 #umekomiを確認
-#print(umekomi)
+print(umekomi)
 
 for i in range(len(statuses)):
 
