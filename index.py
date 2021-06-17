@@ -156,6 +156,7 @@ Content-type: text/html
 </div>
 </div>
 
+<center>
 <div class="flex">
 <div>{tw1}</div>
 <div class="balloon5">
@@ -168,6 +169,7 @@ Content-type: text/html
 </div>
 </div>
 </div>
+</center>
 
 <div class="flex">
 <div>{tw2}</div>
