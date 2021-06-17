@@ -21,12 +21,16 @@ def func(url):
     text="\n".join(line for line in lines if line)
 
     if "ロイター" in text:
-        text = text.split('分で読む')[1]
-        text = text.split('私たちの行動規範')[0]
+        if '分で読む' in text:
+            text = text.split('分で読む')[1]
+        if '私たちの行動規範' in text:
+            text = text.split('私たちの行動規範')[0]
 
     if "BBCニュース" in text:
-        text = text.split('関連コンテンツ')[0]
-        text= text.replace('＜関連記事＞','')
+        if '関連コンテンツ' in text:
+            text = text.split('関連コンテンツ')[0]
+        if '私たちの行動規範' in text:
+            text= text.replace('＜関連記事＞','')
         if 'お使いの端末ではメディアプレイバックはご利用になれません' in text:
             text = text.split('お使いの端末ではメディアプレイバックはご利用になれません')[1]
         if 'ジャンルホームコロナウイルス日本アジアイギリスアメリカ解説・読み物ビデオワールドニュースTVホームコロナウイルス日本アジアイギリスアメリカ解説・読み物ビデオワールドニュースTV' in text:
