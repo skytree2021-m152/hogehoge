@@ -122,14 +122,14 @@ Content-type: text/html
 <link rel="stylesheet" href="../index2.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-<img src="NewsFriend.png">
+
 
 <title>{title}</title>
 
 </head>
 
 <body>
-
+<header><img src="NewsFriend.png"width="50%" height="50%" ></header>
 <center><h1>{title}</h1></center>
 <p><center>本日のニュースを気軽に読む</center></p>
 
