@@ -104,7 +104,7 @@ for i in range (len(mag)):
     image= Johnny.Johnny(mag[i],score[i])
     imagelist.append(image)
 
-for i in range(texts):
+for i in range(len(texts)):
   texts[i]=texts[i].replace('\n','\\n')
 
 #print(mag)
@@ -213,6 +213,8 @@ Content-type: text/html
 </body>
 <script>
 console.log('{tx0}')
+console.log('{tx1}')
+console.log('{tx2}')
 </script>
 </html>
-'''[1:-1].format(title=title_str,tw1=umekomi[0],tw2=umekomi[1],tw3=umekomi[2],image1=imagelist[0],image2=imagelist[1],image3=imagelist[2],mag1=mag[0],mag2=mag[1],mag3=mag[2],sc1=score[0],sc2=score[1],sc3=score[2],tx0=texts[0]))
+'''[1:-1].format(title=title_str,tw1=umekomi[0],tw2=umekomi[1],tw3=umekomi[2],image1=imagelist[0],image2=imagelist[1],image3=imagelist[2],mag1=mag[0],mag2=mag[1],mag3=mag[2],sc1=score[0],sc2=score[1],sc3=score[2],tx0=texts[0],tx1=texts[1],tx2=texts[2]))
