@@ -4,6 +4,7 @@
     display: -ms-flex;
     display: -o-flex;
     display: flex;
+    align-items: center;
 }
 h1{color: hsl(210, 100%, 56%);}
 
