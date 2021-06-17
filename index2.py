@@ -101,12 +101,11 @@ for i in range(len(texts)):
   score.append(res['documentSentiment']['score'])
 
 #３つのジョニーの顔を判定する
-for i in range 3:
+for i in range (len(mag)):
     image= Johnny.Johnny(mag[i],score[i])
   #CGIの時は↓はけすこと 
-  imagelist.append(image)
-  
-
+    imagelist.append(image)
+   
 #print(mag)
 #print(score)
 title_str = 'TWITTER トレンド'
