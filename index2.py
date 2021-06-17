@@ -159,7 +159,7 @@ Content-type: text/html
 <div>{tw1}</div>
 <div class="balloon5">
 <div class="faceicon">
-<img src={image1}  width="280" height="186" />
+<img src="{image1}" width="280" height="186" />
 </div>
 <div class="chatting">
 <div class="says">
@@ -172,7 +172,7 @@ Content-type: text/html
 <div>{tw2}</div>
 <div class="balloon5">
 <div class="faceicon">
-<img src={image2}  width="280" height="186" />
+<img src="{image2}"  width="280" height="186" />
 </div>
 <div class="chatting">
 <div class="says">
@@ -185,7 +185,7 @@ Content-type: text/html
 <div>{tw3}</div>
 <div class="balloon5">
 <div class="faceicon">
-<img src={image3}  width="280" height="186" />
+<img src="{image3}"  width="280" height="186" />
 </div>
 <div class="chatting">
 <div class="says">
