@@ -67,6 +67,6 @@ option{
   font-size: large;
 }
 .contents{
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  text-align: center;
 }
