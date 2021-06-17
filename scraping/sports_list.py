@@ -32,6 +32,10 @@ def func(url):
         aruka7='【関連記事】' in text
         aruka8='続きを読む' in text
         aruka9='「JavaScriptの設定方法」をご覧ください。' in text
+        aruka10='関連リンク' in text
+        aruka11='<![endif]-->' in text
+        aruka12='このページではJavaScriptを使用しています。' in text
+        aruka13='続きはスポーツナビ公式アプリ（無料）で読むことができます。' in text
 
         if aruka5==True:
             text=text.split('JavaScriptの設定を変更する方法はこちら')[1]
@@ -39,6 +43,7 @@ def func(url):
             text=text.split('トピックス一覧')[1]
         elif aruka9==True:
             text=text.split('「JavaScriptの設定方法」をご覧ください。')[1]
+        elif aruka10==True:
             text=text.split('関連リンク')[0]
 
         if aruka7==True:
@@ -47,10 +52,11 @@ def func(url):
             text = text.split('続きを読む')[0]
         
     elif aruka2==True:
-        text=text.split('<![endif]-->')[1]
-        text=text.split('【関連リンク】')[0]
-        text=text.split('続きはスポーツナビ公式アプリ（無料）で読むことができます。')[0]
-            
-        text = text.split('このページではJavaScriptを使用しています。')[1]
+        if aruka11==True and aruka10==True and aruka13==True:
+            text=text.split('<![endif]-->')[1]
+            text=text.split('【関連リンク】')[0]
+            text=text.split('続きはスポーツナビ公式アプリ（無料）で読むことができます。')[0]
+        elif aruka12==True: 
+            text = text.split('このページではJavaScriptを使用しています。')[1]
             
     return text
