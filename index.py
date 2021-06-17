@@ -122,6 +122,8 @@ Content-type: text/html
 <link rel="stylesheet" href="../index2.css">
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
+<img src="NewsFriend.png">
+
 <title>{title}</title>
 
 </head>
