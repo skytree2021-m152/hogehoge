@@ -199,7 +199,7 @@ Content-type: text/html
 
 <form><center>
 <select onChange="top.location.href=value">
-<option value="#">選択</option>
+<option value="#">分野を選択</option>
 <option value="ITindex.py">IT</option>
 <option value="kokusaiindex.py">国際</option>
 <option value="sportindex.py">スポーツ</option>
