@@ -129,7 +129,7 @@ Content-type: text/html
 </head>
 
 <body>
-<header><img src="NewsFriend.png"width="50%" height="50%" ></header>
+<header><img src="NewsFriend.png"width="16%" height="16%" ></header>
 <center><h1>{title}</h1></center>
 <p><center>本日のニュースを気軽に読む</center></p>
 
