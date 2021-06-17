@@ -28,7 +28,7 @@ geturl = "https://api.twitter.com/1.1/statuses/oembed.json?id="
 
 if tw.api is not None:
   #リストの中から最新3ツイートを取得(リツイートを含む)
-    for status in tw.api.list_timeline(list_id=1403234679289827330, count=3, include_rts=1):
+    for status in tw.api.list_timeline(list_id=1403234679289827330, count=5, include_rts=1):
       #リツイートされたものか判定
         if "retweeted_status" in status._json:
           #print("リツイートされているツイート",status.id)
@@ -84,8 +84,10 @@ for i in range(len(statuses)):
     #モデルプレスとオリコンは全文表示のリンクに変える
     if "mdpr.jp" in url:
       url=url.replace("news/","news/detail/")
-    if "oricon.co.jp" in url:
-      url=url.replace("?utm_source=Twitter&utm_medium=social&ref_cd=tw_pic","full/")
+    if "oricon.co.jp" in url and "?utm_source=Twitter" in url:
+      url=url.split("?utm_source=Twitter")[0]
+      url=url+"full/"
+    #print(i+1,url)
     
 
     #urlを別ファイルに渡して実行
@@ -97,9 +99,9 @@ for i in range(len(statuses)):
     #ツイートの本文取得
     #print(statuses[i]["full_text"])
     texts.append(statuses[i]["full_text"])
-print(texts[0])
-print(texts[1])
-print(texts[2])
+#print(texts[0])
+#print(texts[1])
+#print(texts[2])
 
 mag=[]
 score=[]
