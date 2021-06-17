@@ -72,7 +72,7 @@ if __name__ == '__main__':
     umekomi.append(res["html"])
 
 #umekomiを確認
-#print(umekomi)
+print(umekomi)
 
 for i in range(len(statuses)):
 
@@ -158,7 +158,7 @@ Content-type: text/html
 </div>
 
 <div class="flex">
-  <div>{tw1}</div>
+  <div class="mannaka">{tw1}</div>
     <div class="balloon5">
       <div class="faceicon">
         <img src={image1} width="280" height="186" />
