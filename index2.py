@@ -124,6 +124,17 @@ Content-type: text/html
 <center><h1>{title}</h1></center>
 <p><center>本日のニュースを気軽に読む</center></p>
 
+<form><center>
+<select onChange="top.location.href=value">
+<option value="#">選択</option>
+<option value="ITindex.py">IT</option>
+<option value="kokusaiindex.py">国際</option>
+<option value="sportindex.py">スポーツ</option>
+<option value="entameindex.py">芸能・エンタメ</option>
+</select></center>
+</form>
+
+
 <div class="flex">
 <div>{tw1}</div>
 <div class="balloon5">
