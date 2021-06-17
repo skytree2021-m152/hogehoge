@@ -156,20 +156,19 @@ Content-type: text/html
 </div>
 </div>
 
-<center>
 <div class="flex">
-<div>{tw1}</div>
-<div class="balloon5">
-<div class="faceicon">
-<img src={image1} width="280" height="186" />
+  <div>{tw1}</div>
+    <div class="balloon5">
+      <div class="faceicon">
+        <img src={image1} width="280" height="186" />
+      </div>
+      <div class="chatting">
+        <div class="says">
+          <h2>感情のデカさ：{mag1}<br>いい話度：{sc1}</h2>
+        </div>
+      </div>
+    </div>
 </div>
-<div class="chatting">
-<div class="says">
-<h2>感情のデカさ：{mag1}<br>いい話度：{sc1}</h2></div>
-</div>
-</div>
-</div>
-</center>
 
 <div class="flex">
 <div>{tw2}</div>
