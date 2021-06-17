@@ -101,7 +101,7 @@ for i in range(len(texts)):
   score.append(res['documentSentiment']['score'])
 
 #３つのジョニーの顔を判定する
-for i in range(len(texts)):
+for i in range 3:
     image= Johnny.Johnny(mag[i],score[i])
   #CGIの時は↓はけすこと 
   imagelist.append(image)
