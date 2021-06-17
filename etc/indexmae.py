@@ -124,29 +124,6 @@ Content-type: text/html
 <center><h1>{title}</h1></center>
 <p><center>本日のニュースを気軽に読む</center></p>
 
-<form><center>
-<select onChange="top.location.href=value">
-<option value="#">選択</option>
-<option value="ITindex.py">IT</option>
-<option value="kokusaiindex.py">国際</option>
-<option value="sportindex.py">スポーツ</option>
-<option value="entameindex.py">芸能・エンタメ</option>
-</select></center>
-</form>
-
-<div class="balloon5">
-<div class="faceicon">
-<img src="https://3.bp.blogspot.com/-lzZsNV3zWuw/U7O66Xv-z3I/AAAAAAAAiVE/sUbsC_xKdP8/s800/whiteman3_tehe.png"  width="280" height="186" />
-</div>
-<div class="chatting">
-<div class="says">
-<h2>Hi！僕はジョニー！！<br>
-感情分析APIに基づいて代わりにリアクションするよ！<br>
-感情のデカさ：感情の振れ幅が大きい記事で値が大きくなります。感情分析結果の絶対値を累積します。
-<br>いい話度：-1～+1の範囲で推移します。良い話だとプラス、悪い話だとマイナスになります。</h2></div>
-</div>
-</div>
-
 <div class="flex">
 <div>{tw1}</div>
 <div class="balloon5">
@@ -187,16 +164,19 @@ Content-type: text/html
 </div>
 
 
+<div class="dropdown">
+	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+		選択
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" role="menu">
+		<li role="presentation"><a href="ITindex.py">IT</a></li>
+		<li role="presentation"><a href="kokusaiindex.py">国際</a></li>
+		<li role="presentation"><a href="sportindex.py">スポーツ</a></li>
+    <li role="presentation"><a href="entameindex.py">芸能・エンタメ</a></li>
+	</ul>
+</div>
 
-<form><center>
-<select onChange="top.location.href=value">
-<option value="#">選択</option>
-<option value="ITindex.py">IT</option>
-<option value="kokusaiindex.py">国際</option>
-<option value="sportindex.py">スポーツ</option>
-<option value="entameindex.py">芸能・エンタメ</option>
-</select>
-</form></center>
 
 </body>
 </html>
