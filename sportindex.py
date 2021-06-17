@@ -8,7 +8,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 #pythonファイルのインポート
 #scraping.の後はリストに応じたファイル名を指定！
-import scraping.sports_list as s,kanjou
+import scraping.sports_list as s,kanjou,Johnny
 
 # InsecureRequestWarning対策
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
@@ -92,12 +92,18 @@ for i in range(len(statuses)):
 
 mag=[]
 score=[]
+imagelist=[]
 #３つのツイートを感情分析APIに入れる
 for i in range(len(texts)):
   res = kanjou.main(texts[i])
   #CGIの時は↓はけすこと 
   mag.append(res['documentSentiment']["magnitude"])
   score.append(res['documentSentiment']['score'])
+#３つのジョニーの顔を判定する
+for i in range (len(mag)):
+    image= Johnny.Johnny(mag[i],score[i])
+  #CGIの時は↓はけすこと 
+    imagelist.append(image)
 
 #print(mag)
 #print(score)
@@ -128,7 +134,7 @@ Content-type: text/html
 <div>{tw1}</div>
 <div class="balloon5">
 <div class="faceicon">
-<img src="https://1.bp.blogspot.com/-Zg12XWQzTQA/U7O64KmAGhI/AAAAAAAAiUY/PvNni1PWTyk/s800/whiteman2_idea.png"  width="280" height="186" />
+<img src={image1}  width="280" height="186" />
 </div>
 <div class="chatting">
 <div class="says">
@@ -141,7 +147,7 @@ Content-type: text/html
 <div>{tw2}</div>
 <div class="balloon5">
 <div class="faceicon">
-<img src="https://2.bp.blogspot.com/-jb-vJs48VBs/U7O64nt6_SI/AAAAAAAAiUg/N46UerPXEJU/s800/whiteman2_shock.png"  width="280" height="186" />
+<img src={image2}  width="280" height="186" />
 </div>
 <div class="chatting">
 <div class="says">
@@ -154,7 +160,7 @@ Content-type: text/html
 <div>{tw3}</div>
 <div class="balloon5">
 <div class="faceicon">
-<img src="https://2.bp.blogspot.com/-Bb6rSSRE9u4/U7O648vJ9oI/AAAAAAAAiUk/DpmLgnnSOZU/s800/whiteman2_surprise.png"  width="280" height="186" />
+<img src={image3}  width="280" height="186" />
 </div>
 <div class="chatting">
 <div class="says">
@@ -171,4 +177,4 @@ Content-type: text/html
 
 </body>
 </html>
-'''[1:-1].format(title=title_str,tw1=umekomi[0],tw2=umekomi[1],tw3=umekomi[2],mag1=mag[0],mag2=mag[1],mag3=mag[2],sc1=score[0],sc2=score[1],sc3=score[2]))
+'''[1:-1].format(title=title_str,tw1=umekomi[0],tw2=umekomi[1],tw3=umekomi[2],image1=imagelist[0],image2=imagelist[1],image3=imagelist[2],mag1=mag[0],mag2=mag[1],mag3=mag[2],sc1=score[0],sc2=score[1],sc3=score[2]))
