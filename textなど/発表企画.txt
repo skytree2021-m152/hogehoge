@@ -2,6 +2,7 @@
 タイトル
 目次
 目的らへん
+開発環境（開発PC→GitHub→EC2）
 APIの概要
 Google Natural Languageについてくわしく
 スクレイピング
