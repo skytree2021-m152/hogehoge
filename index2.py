@@ -92,6 +92,7 @@ for i in range(len(statuses)):
 
 mag=[]
 score=[]
+imagelist=[]
 #３つのツイートを感情分析APIに入れる
 for i in range(len(texts)):
   res = kanjou.main(texts[i])
@@ -103,7 +104,7 @@ for i in range(len(texts)):
 for i in range(len(texts)):
     image= Johnny.Johnny(mag[i],score[i])
   #CGIの時は↓はけすこと 
-  image.append(image)
+  imagelist.append(image)
   
 
 #print(mag)
@@ -207,4 +208,4 @@ Content-type: text/html
 
 </body>
 </html>
-'''[1:-1].format(title=title_str,tw1=umekomi[0],tw2=umekomi[1],tw3=umekomi[2],image1=image[0],image2=image[1],image3=image[2],mag1=mag[0],mag2=mag[1],mag3=mag[2],sc1=score[0],sc2=score[1],sc3=score[2]))
+'''[1:-1].format(title=title_str,tw1=umekomi[0],tw2=umekomi[1],tw3=umekomi[2],image1=imagelist[0],image2=imagelist[1],image3=imagelist[2],mag1=mag[0],mag2=mag[1],mag3=mag[2],sc1=score[0],sc2=score[1],sc3=score[2]))
