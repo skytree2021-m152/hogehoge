@@ -58,8 +58,7 @@ h1{color: hsl(210, 100%, 56%);}
 
 .twitter-tweet{
     width: 80%;  
-    margin-left:auto ;
-    margin-right:auto ;
+    
 }
 
 select{width: 20%;
@@ -70,9 +69,4 @@ option{
 }
 .contents{
   margin: 0 auto;
-}
-.mannaka{
-  margin-left: auto;
-  margin-right: auto;
-
 }
