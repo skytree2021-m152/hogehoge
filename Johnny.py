@@ -9,7 +9,7 @@ def Johnny(mag,score):
         if mag>=10:
             image="https://2.bp.blogspot.com/-Bb6rSSRE9u4/U7O648vJ9oI/AAAAAAAAiUk/DpmLgnnSOZU/s800/whiteman2_surprise.png"
             return image
-        elif mag>=5:
+        elif mag>=3:
             image="https://1.bp.blogspot.com/-Zg12XWQzTQA/U7O64KmAGhI/AAAAAAAAiUY/PvNni1PWTyk/s800/whiteman2_idea.png"
             return image
         elif mag>=0.5:
