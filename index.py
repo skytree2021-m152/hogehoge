@@ -104,6 +104,8 @@ for i in range (len(mag)):
     image= Johnny.Johnny(mag[i],score[i])
     imagelist.append(image)
 
+texts[0]=texts[0].replace('\n','')
+
 #print(mag)
 #print(score)
 title_str = 'TWITTER トレンド'
@@ -209,7 +211,7 @@ Content-type: text/html
 
 </body>
 <script>
-process.stdout.write({tx0})
+console.log({tx0})
 </script>
 </html>
 '''[1:-1].format(title=title_str,tw1=umekomi[0],tw2=umekomi[1],tw3=umekomi[2],image1=imagelist[0],image2=imagelist[1],image3=imagelist[2],mag1=mag[0],mag2=mag[1],mag3=mag[2],sc1=score[0],sc2=score[1],sc3=score[2],tx0=texts[0]))
