@@ -104,6 +104,7 @@ for i in range (len(mag)):
     image= Johnny.Johnny(mag[i],score[i])
     imagelist.append(image)
 
+texts[0]=texts[0].replace('\n','\\n')
 
 #print(mag)
 #print(score)
