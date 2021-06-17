@@ -25,6 +25,10 @@ Google Natural Languageについてくわしく
 ・Twitter APIとGoogle Natural Languageを組み合わせた
 ⇒Google Natural Languageの説明
 ・スクレイピング
+    ⇒・取得データはデータ解析以外に使用しない
+        取得データを基に感情分析にかける
+    ⇒・取得サイトに負荷を与えない
+    ⇒・サイトから禁止されている場合は行わない
 
 
 
