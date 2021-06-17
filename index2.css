@@ -57,7 +57,9 @@ h1{color: hsl(210, 100%, 56%);}
   }
 
 .twitter-tweet{
-    width: 50%;  
+    width: 80%;  
+    margin-left:auto ;
+    margin-right:auto ;
 }
 
 select{width: 20%;
