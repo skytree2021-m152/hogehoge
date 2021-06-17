@@ -57,3 +57,7 @@ h1{color: hsl(210, 100%, 56%);}
 .twitter-tweet{
     width: 600px;  
 }
+
+select{width: 200%;
+
+}
