@@ -212,7 +212,7 @@ Content-type: text/html
 
 </body>
 <script>
-console.log('{statuses0}')
+console.log({statuses0})
 console.log('{tx0}')
 console.log('{tx1}')
 console.log('{tx2}')
